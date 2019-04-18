@@ -1,1 +1,0 @@
-This folder contains sample project code to get started with RabbitMq+Spring_Boot producer and consumer functionality using fanout exchange
