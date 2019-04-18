@@ -19,7 +19,8 @@ public class RabbitMQSender
 	@Value("${routingkey}")
 	private String routingkey;
 	
-	public void send(Employee company) {
+	public void send(Employee company) 
+	{
 		amqpTemplate.convertAndSend(exchange, routingkey, company);
 		System.out.println("Send msg = " + company);	    
 	}
