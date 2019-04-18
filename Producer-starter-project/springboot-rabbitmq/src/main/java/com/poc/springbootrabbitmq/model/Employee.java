@@ -1,6 +1,5 @@
 package com.poc.springbootrabbitmq.model;
 
-//@JsonIdentityInfo(generator = ObjectIdGenerators.IntSequenceGenerator.class, property = "@id", scope = Employee.class)
 public class Employee {
 
 	private String empName;
