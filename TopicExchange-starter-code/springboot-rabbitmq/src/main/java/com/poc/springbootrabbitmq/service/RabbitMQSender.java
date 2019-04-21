@@ -18,11 +18,8 @@ public class RabbitMQSender
 	
 	public void send(Employee company) 
 	{
-		amqpTemplate.convertAndSend(exchange,"user.not-important.info", company.getEmpId());
-		company.setEmpId("Id");
-		company.setEmpName("Name");	
-		amqpTemplate.convertAndSend(exchange,"user.important.error", company);
-		System.out.println("Send msg = " + company);	    
+		amqpTemplate.convertAndSend(exchange,"error", company);
+		amqpTemplate.convertAndSend(exchange,"error", company.getEmpName());
 	}
 	
 }

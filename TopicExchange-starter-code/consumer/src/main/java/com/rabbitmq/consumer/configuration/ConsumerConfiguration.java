@@ -19,18 +19,16 @@ public class ConsumerConfiguration implements RabbitListenerConfigurer
         return converter;
     }
 
-    @Bean
-    public DefaultMessageHandlerMethodFactory myHandlerMethodFactory() 
-    {
+	@Bean
+    public DefaultMessageHandlerMethodFactory myHandlerMethodFactory() {
         DefaultMessageHandlerMethodFactory factory = new DefaultMessageHandlerMethodFactory();
         factory.setMessageConverter(jackson2Converter());
         return factory;
     }
-    
-	@Override
-	public void configureRabbitListeners(RabbitListenerEndpointRegistrar registrar) 
-	{
-		registrar.setMessageHandlerMethodFactory(myHandlerMethodFactory());
-	}
+
+    @Override
+    public void configureRabbitListeners(RabbitListenerEndpointRegistrar registrar) {
+        registrar.setMessageHandlerMethodFactory(myHandlerMethodFactory());
+    }
 
 }
