@@ -1,11 +1,7 @@
 package com.rabbitmq.consumer.model;
 
-import java.io.Serializable;
-
-public class Employee implements Serializable
+public class Employee
 {
-
-	private static final long serialVersionUID = 1L;
 	
 	private String empName;
 	private String empId;

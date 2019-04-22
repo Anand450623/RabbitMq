@@ -11,7 +11,8 @@ import com.poc.springbootrabbitmq.service.RabbitMQSender;
 
 @RestController
 @RequestMapping(value = "/rabbitmq/")
-public class RabbitMQWebController {
+public class RabbitMQWebController 
+{
 
 	@Autowired
 	RabbitMQSender rabbitMQSender;

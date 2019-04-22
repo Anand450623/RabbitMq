@@ -16,10 +16,10 @@ public class RabbitMQSender
 	@Value("${exchangeName}")
 	private String exchange;
 	
-	public void send(Employee company) 
+	public void send(Employee employee) 
 	{
-		amqpTemplate.convertAndSend(exchange,"error", company);
-		amqpTemplate.convertAndSend(exchange,"error", company.getEmpName());
+		amqpTemplate.convertAndSend(exchange,"some.important.error", employee);		// sends data to both error and important queue
+		amqpTemplate.convertAndSend(exchange,"nothing.but.error", employee.getEmpName());	// sends data to error queue only
 	}
 	
 }
