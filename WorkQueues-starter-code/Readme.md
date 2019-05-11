@@ -1,0 +1,1 @@
+This folder contains sample project code to get started with RabbitMq Work queues.
